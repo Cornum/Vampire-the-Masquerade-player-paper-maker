@@ -5,14 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VampireProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="300" Width="600">
+        Title="MainWindow" Height="300" Width="600" ResizeMode="NoResize">
     <StackPanel>
+        <StackPanel.Background>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5, 1">
+                <GradientStop Color="DarkSlateGray" Offset="0.0"/>
+                <GradientStop Color="DarkOliveGreen" Offset="0.5"/>
+                <GradientStop Color="MidnightBlue" Offset="1.0"/>
+            </LinearGradientBrush>
+        </StackPanel.Background>
         <StackPanel Width="200" Margin="0,20,0,10">
-            <TextBlock Text="Vampire" FontFamily="TimesNewRoman" FontSize="24" TextAlignment="Center"/>
-            <TextBlock Text="the Masquarade" FontFamily="TimesNewRoman" FontSize="24" TextAlignment="Center"/>
+            <TextBlock Text="Vampire the Masquerade" FontFamily="TimesNewRoman" FontSize="24" TextAlignment="Center" TextWrapping="Wrap"/>
         </StackPanel>
-        <TabControl>
-            <TabItem Header="Main">
+        <TabControl Background="Wheat" BorderThickness="0" Width="500">
+            <TabItem Header="Main" Background="LawnGreen" BorderThickness="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Column="0" Grid.Row="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Name="valueStrength1" Checked="radioBtnStr1_Checked" GroupName="Strength" Grid.Column="0"/>
+                            <RadioButton Name="valueStrength2" GroupName="Strength" Grid.Column="1"/>
+                            <RadioButton Name="valueStrength3" GroupName="Strength" Grid.Column="2"/>
+                            <RadioButton Name="valueStrength4" GroupName="Strength" Grid.Column="3"/>
+                            <RadioButton Name="valueStrength5" GroupName="Strength" Grid.Column="4"/>
+                            <Label Grid.Column="5" Content="Strength" Padding="0,0,0,10"/>
+                        </Grid>
+                        <CheckBox Content="Strength"/>
+                        <CheckBox Content="Strength"/>
+                        <CheckBox Content="Strength"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Grid.Row="1">
+                        <CheckBox Content="Strength"/>
+                        <CheckBox Content="Strength"/>
+                        <CheckBox Content="Strength"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2" Grid.Row="1">
+                        <CheckBox Content="Strength"/>
+                        <CheckBox Content="Strength"/>
+                        <CheckBox Content="Strength"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Social" Background="LawnGreen" BorderThickness="0">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -40,35 +90,7 @@
                     </StackPanel>
                 </Grid>
             </TabItem>
-            <TabItem Header="Social">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <StackPanel Grid.Column="0" Grid.Row="1">
-                        <CheckBox Content="Strength"/>
-                        <CheckBox Content="Strength"/>
-                        <CheckBox Content="Strength"/>
-                    </StackPanel>
-                    <StackPanel Grid.Column="1" Grid.Row="1">
-                        <CheckBox Content="Strength"/>
-                        <CheckBox Content="Strength"/>
-                        <CheckBox Content="Strength"/>
-                    </StackPanel>
-                    <StackPanel Grid.Column="2" Grid.Row="1">
-                        <CheckBox Content="Strength"/>
-                        <CheckBox Content="Strength"/>
-                        <CheckBox Content="Strength"/>
-                    </StackPanel>
-                </Grid>
-            </TabItem>
-            <TabItem Header="Extra">
+            <TabItem Header="Extra" Background="LawnGreen" BorderThickness="0">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -97,9 +119,9 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <DockPanel DockPanel.Dock="Bottom" Margin="0,0,0,20" Background="LightGray">
-            <Button Width="50" Height="50" Name="btnSave" Content="Save" BorderThickness="0" Background="AntiqueWhite" HorizontalAlignment="Center"/>
-            <Button Width="50" Height="50" Name="btnReset" Content="Reset" BorderThickness="0" Background="AntiqueWhite" HorizontalAlignment="Center"/>
+        <DockPanel DockPanel.Dock="Bottom" Margin="0,0,0,20" Width="110">
+            <Button Width="50" Height="20"  Name="btnSave" Content="Save" BorderThickness="0" Background="AntiqueWhite" HorizontalAlignment="Left"/>
+            <Button Width="50" Height="20" Name="btnReset" Content="Reset" BorderThickness="0" Background="AntiqueWhite" HorizontalAlignment="Right"/>
         </DockPanel>
     </StackPanel>
 </Window>

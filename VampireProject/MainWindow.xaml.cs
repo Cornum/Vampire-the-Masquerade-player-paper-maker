@@ -19,6 +19,11 @@ namespace VampireProject
         public MainWindow()
         {
             InitializeComponent();
+            
+        }
+
+        private void radioBtnStr1_Checked(object sender, RoutedEventArgs e)
+        {
         }
     }
 }

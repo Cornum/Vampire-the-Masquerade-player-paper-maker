@@ -8,40 +8,32 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\den.khvan.pak\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\DevExpress 20.2\\.NET Core Desktop Libraries\\Offline Packages": {},
-    "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Cornum\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\den.khvan.pak\\source\\repos\\VampireProject\\VampireProject\\VampireProject.csproj",
+      "projectUniqueName": "C:\\Users\\Cornum\\Source\\Repos\\Vampire-the-Masquerade-player-paper-maker\\VampireProject\\VampireProject.csproj",
       "projectName": "VampireProject",
-      "projectPath": "C:\\Users\\den.khvan.pak\\source\\repos\\VampireProject\\VampireProject\\VampireProject.csproj",
-      "packagesPath": "C:\\Users\\den.khvan.pak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\den.khvan.pak\\source\\repos\\VampireProject\\VampireProject\\obj\\",
+      "projectPath": "C:\\Users\\Cornum\\Source\\Repos\\Vampire-the-Masquerade-player-paper-maker\\VampireProject\\VampireProject.csproj",
+      "packagesPath": "C:\\Users\\Cornum\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Cornum\\Source\\Repos\\Vampire-the-Masquerade-player-paper-maker\\VampireProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\DevExpress 20.2\\.NET Core Desktop Libraries\\Offline Packages",
-        "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\den.khvan.pak\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress .NET Core Desktop 20.2.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.2.config",
+        "C:\\Users\\Cornum\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0-windows"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\DevExpress 20.2\\.NET Core Desktop Libraries\\System\\Components\\Packages": {},
-        "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.devexpress.com/h2g1zn3BlvJdZLgi2QH618ntJnyMGaMcg2ERLXC8VeajPy6HrQ/api": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -82,7 +74,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

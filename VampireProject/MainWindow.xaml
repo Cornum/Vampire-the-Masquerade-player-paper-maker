@@ -18,7 +18,7 @@
             <TextBlock Text="Vampire the Masquerade" FontFamily="TimesNewRoman" FontSize="24" TextAlignment="Center" TextWrapping="Wrap"/>
         </StackPanel>
         <TabControl Background="Wheat" BorderThickness="0" Width="500">
-            <TabItem Header="Main" Background="LawnGreen" BorderThickness="0">
+            <TabItem Header="Characteristics" Background="LawnGreen" BorderThickness="0">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -30,6 +30,7 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <StackPanel Grid.Column="0" Grid.Row="1">
+                        <Label Name="lblPhysical" Content="Physical" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" Padding="0,0,0,5"/>
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -39,30 +40,154 @@
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <RadioButton Name="valueStrength1" Checked="radioBtnStr1_Checked" GroupName="Strength" Grid.Column="0"/>
-                            <RadioButton Name="valueStrength2" GroupName="Strength" Grid.Column="1"/>
-                            <RadioButton Name="valueStrength3" GroupName="Strength" Grid.Column="2"/>
-                            <RadioButton Name="valueStrength4" GroupName="Strength" Grid.Column="3"/>
-                            <RadioButton Name="valueStrength5" GroupName="Strength" Grid.Column="4"/>
+                            <RadioButton Name="radioBtnStr1" IsChecked="True" Checked="RadioBtnStr_Checked" GroupName="Strength" Grid.Column="0"/>
+                            <RadioButton Name="radioBtnStr2" Checked="RadioBtnStr_Checked" GroupName="Strength" Grid.Column="1"/>
+                            <RadioButton Name="radioBtnStr3" Checked="RadioBtnStr_Checked" GroupName="Strength" Grid.Column="2"/>
+                            <RadioButton Name="radioBtnStr4" Checked="RadioBtnStr_Checked" GroupName="Strength" Grid.Column="3"/>
+                            <RadioButton Name="radioBtnStr5" Checked="RadioBtnStr_Checked" GroupName="Strength" Grid.Column="4"/>
                             <Label Grid.Column="5" Content="Strength" Padding="0,0,0,10"/>
                         </Grid>
-                        <CheckBox Content="Strength"/>
-                        <CheckBox Content="Strength"/>
-                        <CheckBox Content="Strength"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Name="radioBtnDex1" IsChecked="True" Checked="RadioBtnDex_Checked" GroupName="Dexterity" Grid.Column="0"/>
+                            <RadioButton Name="radioBtnDex2" Checked="RadioBtnDex_Checked" GroupName="Dexterity" Grid.Column="1"/>
+                            <RadioButton Name="radioBtnDex3" Checked="RadioBtnDex_Checked" GroupName="Dexterity" Grid.Column="2"/>
+                            <RadioButton Name="radioBtnDex4" Checked="RadioBtnDex_Checked" GroupName="Dexterity" Grid.Column="3"/>
+                            <RadioButton Name="radioBtnDex5" Checked="RadioBtnDex_Checked" GroupName="Dexterity" Grid.Column="4"/>
+                            <Label Grid.Column="5" Content="Dexterity" Padding="0,0,0,10"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Name="radioBtnVit1" IsChecked="True" Checked="RadioBtnVit_Checked" GroupName="Vitality" Grid.Column="0"/>
+                            <RadioButton Name="radioBtnVit2" Checked="RadioBtnVit_Checked" GroupName="Vitality" Grid.Column="1"/>
+                            <RadioButton Name="radioBtnVit3" Checked="RadioBtnVit_Checked" GroupName="Vitality" Grid.Column="2"/>
+                            <RadioButton Name="radioBtnVit4" Checked="RadioBtnVit_Checked" GroupName="Vitality" Grid.Column="3"/>
+                            <RadioButton Name="radioBtnVit5" Checked="RadioBtnVit_Checked" GroupName="Vitality" Grid.Column="4"/>
+                            <Label Grid.Column="5" Content="Vitality" Padding="0,0,0,10"/>
+                        </Grid>
+                        <Label x:Name="lblPhysicalCount" Content="Points left:" HorizontalAlignment="Center" Foreground="Red" FontSize="12" Padding="0,0,0,5"/>
                     </StackPanel>
                     <StackPanel Grid.Column="1" Grid.Row="1">
-                        <CheckBox Content="Strength"/>
-                        <CheckBox Content="Strength"/>
-                        <CheckBox Content="Strength"/>
+                        <Label Name="lblSocial" Content="Social" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" Padding="0,0,0,5"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Name="radioBtnChrm1" IsChecked="True" Checked="RadioBtnChrm_Checked" GroupName="Charisma" Grid.Column="0"/>
+                            <RadioButton Name="radioBtnChrm2" Checked="RadioBtnChrm_Checked" GroupName="Charisma" Grid.Column="1"/>
+                            <RadioButton Name="radioBtnChrm3" Checked="RadioBtnChrm_Checked" GroupName="Charisma" Grid.Column="2"/>
+                            <RadioButton Name="radioBtnChrm4" Checked="RadioBtnChrm_Checked" GroupName="Charisma" Grid.Column="3"/>
+                            <RadioButton Name="radioBtnChrm5" Checked="RadioBtnChrm_Checked" GroupName="Charisma" Grid.Column="4"/>
+                            <Label Grid.Column="5" Content="Charisma" Padding="0,0,0,10"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Name="radioBtnMan1" IsChecked="True" Checked="RadioBtnMan_Checked" GroupName="Manipulation" Grid.Column="0"/>
+                            <RadioButton Name="radioBtnMan2" Checked="RadioBtnMan_Checked" GroupName="Manipulation" Grid.Column="1"/>
+                            <RadioButton Name="radioBtnMan3" Checked="RadioBtnMan_Checked" GroupName="Manipulation" Grid.Column="2"/>
+                            <RadioButton Name="radioBtnMan4" Checked="RadioBtnMan_Checked" GroupName="Manipulation" Grid.Column="3"/>
+                            <RadioButton Name="radioBtnMan5" Checked="RadioBtnMan_Checked" GroupName="Manipulation" Grid.Column="4"/>
+                            <Label Grid.Column="5" Content="Manipulation" Padding="0,0,0,10"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Name="radioBtnAttr1" IsChecked="True" Checked="RadioBtnAttr_Checked" GroupName="Attractiveness" Grid.Column="0"/>
+                            <RadioButton Name="radioBtnAttr2" Checked="RadioBtnAttr_Checked" GroupName="Attractiveness" Grid.Column="1"/>
+                            <RadioButton Name="radioBtnAttr3" Checked="RadioBtnAttr_Checked" GroupName="Attractiveness" Grid.Column="2"/>
+                            <RadioButton Name="radioBtnAttr4" Checked="RadioBtnAttr_Checked" GroupName="Attractiveness" Grid.Column="3"/>
+                            <RadioButton Name="radioBtnAttr5" Checked="RadioBtnAttr_Checked" GroupName="Attractiveness" Grid.Column="4"/>
+                            <Label Grid.Column="5" Content="Attractiveness" Padding="0,0,0,10"/>
+                        </Grid>
+                        <Label Name="lblSocialCount" Content="Points left:" HorizontalAlignment="Center" Foreground="Red" FontSize="12" Padding="0,0,0,5"/>
                     </StackPanel>
                     <StackPanel Grid.Column="2" Grid.Row="1">
-                        <CheckBox Content="Strength"/>
-                        <CheckBox Content="Strength"/>
-                        <CheckBox Content="Strength"/>
+                        <Label Name="lblMental" Content="Mental" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" Padding="0,0,0,5"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Name="radioBtnPerc1" IsChecked="True" Checked="RadioBtnPerc_Checked" GroupName="Perception" Grid.Column="0"/>
+                            <RadioButton Name="radioBtnPerc2" Checked="RadioBtnPerc_Checked" GroupName="Perception" Grid.Column="1"/>
+                            <RadioButton Name="radioBtnPerc3" Checked="RadioBtnPerc_Checked" GroupName="Perception" Grid.Column="2"/>
+                            <RadioButton Name="radioBtnPerc4" Checked="RadioBtnPerc_Checked" GroupName="Perception" Grid.Column="3"/>
+                            <RadioButton Name="radioBtnPerc5" Checked="RadioBtnPerc_Checked" GroupName="Perception" Grid.Column="4"/>
+                            <Label Grid.Column="5" Content="Perception" Padding="0,0,0,10"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Name="radioBtnInt1" IsChecked="True" Checked="RadioBtnInt_Checked" GroupName="Intellect" Grid.Column="0"/>
+                            <RadioButton Name="radioBtnInt2" Checked="RadioBtnInt_Checked" GroupName="Intellect" Grid.Column="1"/>
+                            <RadioButton Name="radioBtnInt3" Checked="RadioBtnInt_Checked" GroupName="Intellect" Grid.Column="2"/>
+                            <RadioButton Name="radioBtnInt4" Checked="RadioBtnInt_Checked" GroupName="Intellect" Grid.Column="3"/>
+                            <RadioButton Name="radioBtnInt5" Checked="RadioBtnInt_Checked" GroupName="Intellect" Grid.Column="4"/>
+                            <Label Grid.Column="5" Content="Intellect" Padding="0,0,0,10"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Name="radioBtnWit1" IsChecked="True" Checked="RadioBtnWit_Checked" GroupName="Wits" Grid.Column="0"/>
+                            <RadioButton Name="radioBtnWit2" Checked="RadioBtnWit_Checked" GroupName="Wits" Grid.Column="1"/>
+                            <RadioButton Name="radioBtnWit3" Checked="RadioBtnWit_Checked" GroupName="Wits" Grid.Column="2"/>
+                            <RadioButton Name="radioBtnWit4" Checked="RadioBtnWit_Checked" GroupName="Wits" Grid.Column="3"/>
+                            <RadioButton Name="radioBtnWit5" Checked="RadioBtnWit_Checked" GroupName="Wits" Grid.Column="4"/>
+                            <Label Grid.Column="5" Content="Wits" Padding="0,0,0,10"/>
+                        </Grid>
+                        <Label Name="lblMentalCount" Content="Points left:" HorizontalAlignment="Center" Foreground="Red" FontSize="12" Padding="0,0,0,5"/>
                     </StackPanel>
                 </Grid>
             </TabItem>
-            <TabItem Header="Social" Background="LawnGreen" BorderThickness="0">
+            <TabItem Header="Skills" Background="LawnGreen" BorderThickness="0">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -93,25 +218,27 @@
             <TabItem Header="Extra" Background="LawnGreen" BorderThickness="0">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="17*"/>
+                        <ColumnDefinition Width="23*"/>
+                        <ColumnDefinition Width="126*"/>
+                        <ColumnDefinition Width="165*"/>
+                        <ColumnDefinition Width="165*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <StackPanel Grid.Column="0" Grid.Row="1">
+                    <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3">
                         <CheckBox Content="Strength"/>
                         <CheckBox Content="Strength"/>
                         <CheckBox Content="Strength"/>
                     </StackPanel>
-                    <StackPanel Grid.Column="1" Grid.Row="1">
+                    <StackPanel Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Margin="125,0,0,0">
                         <CheckBox Content="Strength"/>
                         <CheckBox Content="Strength"/>
                         <CheckBox Content="Strength"/>
                     </StackPanel>
-                    <StackPanel Grid.Column="2" Grid.Row="1">
+                    <StackPanel Grid.Column="4" Grid.Row="1">
                         <CheckBox Content="Strength"/>
                         <CheckBox Content="Strength"/>
                         <CheckBox Content="Strength"/>
